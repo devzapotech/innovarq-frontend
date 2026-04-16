@@ -15,3 +15,10 @@ export const SOCIAL = [
 ];
 
 export const KEYWORDS = ['Innovación', 'Sostenibilidad', 'Diseño Integral'];
+
+export const STATS = [
+  { num: '180+', label: 'Proyectos completados' },
+  { num: '15', label: 'Ciudades en México' },
+  { num: '98%', label: 'Clientes satisfechos' },
+  { num: '12', label: 'Premios de arquitectura' },
+];
