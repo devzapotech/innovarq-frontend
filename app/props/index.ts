@@ -1,3 +1,4 @@
+import type { MotionValue } from 'motion/react';
 import { NavLink, SocialLink } from "../types";
 
 export interface FooterNavProps {
@@ -38,5 +39,24 @@ export interface HeaderMobileButtonProps {
 export interface HeaderMobileMenuProps {
   links: NavLink[];
   menuOpen: boolean;
+  onNav: (href: string) => void;
+}
+
+// Hero
+export interface HeroBackgroundProps {
+  imgY: MotionValue<string>;
+}
+
+export interface HeroContentProps {
+  textY: MotionValue<string>;
+  opacity: MotionValue<number>;
+  onNav: (href: string) => void;
+}
+
+export interface HeroCTAsProps {
+  onNav: (href: string) => void;
+}
+
+export interface HeroScrollIndicatorProps {
   onNav: (href: string) => void;
 }

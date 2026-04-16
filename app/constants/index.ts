@@ -13,3 +13,5 @@ export const SOCIAL = [
   { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com' },
   { icon: Facebook, label: 'Facebook', href: 'https://facebook.com' },
 ];
+
+export const KEYWORDS = ['Innovación', 'Sostenibilidad', 'Diseño Integral'];
