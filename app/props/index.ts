@@ -1,5 +1,5 @@
 import type { MotionValue } from 'motion/react';
-import { NavLink, SocialLink } from "../types";
+import { NavLink, Project, Service, SocialLink } from "../types";
 
 export interface FooterNavProps {
   links: NavLink[];
@@ -59,4 +59,21 @@ export interface HeroCTAsProps {
 
 export interface HeroScrollIndicatorProps {
   onNav: (href: string) => void;
+}
+
+// Projects
+export interface ProjectCardProps {
+  project: Project;
+  index: number;
+}
+
+export interface ProjectsFilterProps {
+  filters: string[];
+  activeFilter: string;
+  onFilter: (filter: string) => void;
+}
+
+export interface ProjectsGridProps {
+  projects: Project[];
+  activeFilter: string;
 }
