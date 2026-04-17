@@ -77,3 +77,9 @@ export interface ProjectsGridProps {
   projects: Project[];
   activeFilter: string;
 }
+
+// Services
+export interface ServiceCardProps {
+  service: Service;
+  index: number;
+}

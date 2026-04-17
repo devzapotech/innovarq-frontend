@@ -60,6 +60,32 @@ export const PROJECTS: Project[] = [
 
 export const PROJECT_FILTERS = ['Todos', 'Residencial', 'Comercial', 'Interiorismo'];
 
+export const SERVICES: Service[] = [
+  {
+    icon: Building2,
+    title: 'Diseño Arquitectónico',
+    desc: 'Creamos espacios únicos que fusionan estética y funcionalidad. Desde la concepción del concepto hasta los planos constructivos.',
+    num: '01',
+  },
+  {
+    icon: Wrench,
+    title: 'Remodelaciones',
+    desc: 'Transformamos espacios existentes con una visión contemporánea. Respetamos la esencia y la elevamos a un nuevo nivel de diseño.',
+    num: '02',
+  },
+  {
+    icon: HardHat,
+    title: 'Dirección de Obra',
+    desc: 'Supervisamos cada etapa del proceso constructivo con rigor técnico. Garantizamos calidad, tiempos y presupuestos.',
+    num: '03',
+  },
+  {
+    icon: Key,
+    title: 'Proyectos Llave en Mano',
+    desc: 'Gestionamos el proyecto de principio a fin. Diseño, construcción y entrega. Tu único punto de contacto.',
+    num: '04',
+  },
+];
 
 export const LINKS = [
   { label: 'Inicio', href: '#inicio' },

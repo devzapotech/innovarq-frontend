@@ -18,3 +18,10 @@ export interface Project {
   img: string;
   size: 'large' | 'small';
 }
+
+export interface Service {
+  icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>;
+  title: string;
+  desc: string;
+  num: string;
+}
