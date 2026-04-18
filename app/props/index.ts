@@ -1,5 +1,5 @@
 import type { MotionValue } from 'motion/react';
-import { NavLink, Project, Service, SocialLink } from "../types";
+import { NavLink, Project, Service, SocialLink, Testimonial } from "../types";
 
 export interface FooterNavProps {
   links: NavLink[];
@@ -82,4 +82,25 @@ export interface ProjectsGridProps {
 export interface ServiceCardProps {
   service: Service;
   index: number;
+}
+
+// Testimonials
+export interface TestimonialsHeaderProps {
+  onPrev: () => void;
+  onNext: () => void;
+}
+
+export interface TestimonialSlideProps {
+  testimonial: Testimonial;
+  direction: number;
+  current: number;
+  total: number;
+}
+
+export interface TestimonialsDotsProps {
+  total: number;
+  current: number;
+  onDotClick: (i: number) => void;
+  onPrev: () => void;
+  onNext: () => void;
 }

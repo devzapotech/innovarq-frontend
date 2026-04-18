@@ -1,5 +1,5 @@
 import { Building2, Facebook, HardHat, Instagram, Key, Linkedin, Wrench } from "lucide-react";
-import type { Project, Service } from "../types";
+import type { Project, Service, Testimonial } from "../types";
 
 export const PROJECTS: Project[] = [
   {
@@ -108,4 +108,28 @@ export const STATS = [
   { num: '15', label: 'Ciudades en México' },
   { num: '98%', label: 'Clientes satisfechos' },
   { num: '12', label: 'Premios de arquitectura' },
+];
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: 1,
+    quote: 'Innovarq transformó nuestra visión en algo mucho mejor de lo que imaginábamos. La atención al detalle y la creatividad son incomparables. Cada rincón de la casa cuenta una historia.',
+    author: 'Carlos Mendoza',
+    role: 'Director General, Grupo Apex',
+    project: 'Casa Horizonte, Valle de Bravo',
+  },
+  {
+    id: 2,
+    quote: 'El proceso fue fluido, transparente y muy profesional. No solo entregaron un espacio hermoso, sino que transformaron nuestra forma de vivir. El resultado superó todas nuestras expectativas.',
+    author: 'Ana Sofía Ramírez',
+    role: 'Propietaria, Residencia Valle',
+    project: 'Residencia Valle, Guadalajara',
+  },
+  {
+    id: 3,
+    quote: 'Diseñaron nuestra sede corporativa con una sensibilidad única. El espacio ahora refleja perfectamente nuestra identidad como empresa y ha mejorado radicalmente el bienestar de nuestro equipo.',
+    author: 'Roberto Villarreal',
+    role: 'CEO, Nexo Group',
+    project: 'Plaza Nexo, Ciudad de México',
+  },
 ];
