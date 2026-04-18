@@ -1,5 +1,5 @@
 import { Building2, Facebook, HardHat, Instagram, Key, Linkedin, Wrench } from "lucide-react";
-import type { Project, Service, Testimonial } from "../types";
+import type { Project, Service, TeamMember, Testimonial } from "../types";
 
 export const PROJECTS: Project[] = [
   {
@@ -108,6 +108,30 @@ export const STATS = [
   { num: '15', label: 'Ciudades en México' },
   { num: '98%', label: 'Clientes satisfechos' },
   { num: '12', label: 'Premios de arquitectura' },
+];
+
+export const TEAM: TeamMember[] = [
+  {
+    id: 1,
+    name: 'Andrés Iturbe',
+    role: 'Director Creativo & Fundador',
+    img: '/member_1.jpeg',
+    quote: '"La arquitectura es la voluntad de la época traducida al espacio."',
+  },
+  {
+    id: 2,
+    name: 'Valentina Cruz',
+    role: 'Diseñadora Principal',
+    img: '/member_2.jpeg',
+    quote: '"Diseñar es crear relaciones; entre personas, entre espacios, entre mundos."',
+  },
+  {
+    id: 3,
+    name: 'Marcos Fuentes',
+    role: 'Director de Obra',
+    img: '/member_1.jpeg',
+    quote: '"La excelencia constructiva no es un lujo, es el estándar mínimo que merecen nuestros clientes."',
+  },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

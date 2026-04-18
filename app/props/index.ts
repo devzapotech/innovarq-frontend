@@ -1,5 +1,5 @@
 import type { MotionValue } from 'motion/react';
-import { NavLink, Project, Service, SocialLink, Testimonial } from "../types";
+import { NavLink, Project, Service, SocialLink, TeamMember, Testimonial } from "../types";
 
 export interface FooterNavProps {
   links: NavLink[];
@@ -81,6 +81,12 @@ export interface ProjectsGridProps {
 // Services
 export interface ServiceCardProps {
   service: Service;
+  index: number;
+}
+
+// Team
+export interface TeamCardProps {
+  member: TeamMember;
   index: number;
 }
 

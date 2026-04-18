@@ -26,6 +26,14 @@ export interface Service {
   num: string;
 }
 
+export interface TeamMember {
+  id: number;
+  name: string;
+  role: string;
+  img: string;
+  quote: string;
+}
+
 export interface Testimonial {
   id: number;
   quote: string;
