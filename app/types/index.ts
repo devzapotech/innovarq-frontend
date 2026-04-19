@@ -25,3 +25,19 @@ export interface Service {
   desc: string;
   num: string;
 }
+
+export interface TeamMember {
+  id: number;
+  name: string;
+  role: string;
+  img: string;
+  quote: string;
+}
+
+export interface Testimonial {
+  id: number;
+  quote: string;
+  author: string;
+  role: string;
+  project: string;
+}
