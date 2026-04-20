@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { AnimatePresence, motion } from "motion/react";
-import LoadingScreen from "./components/LoadingScreen";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import LayoutWrapper from "./layoutWrapper";
 
 const geistSans = Geist({
