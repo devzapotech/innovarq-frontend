@@ -25,7 +25,13 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
         animate={{ scale: hovered ? 1.06 : 1 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       >
-        <Image src={project.img} alt={project.name} className="w-full h-full object-cover" fill />
+        <Image
+          src={project.img}
+          alt={project.name}
+          className="w-full h-full object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 66vw"
+        />
       </motion.div>
 
       {/* Base overlay */}

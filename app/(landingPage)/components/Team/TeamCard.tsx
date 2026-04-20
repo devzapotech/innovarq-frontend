@@ -14,12 +14,13 @@ export function TeamCard({ member, index }: TeamCardProps) {
       {/* Portrait */}
       <div className="relative overflow-hidden mb-6" style={{ aspectRatio: '3/4' }}>
         <motion.div
-          className="w-full h-full"
+          className="relative w-full h-full"
           whileHover={{ scale: 1.04 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             src={member.img}
             alt={member.name}
             className="w-full h-full object-cover"

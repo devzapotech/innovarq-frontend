@@ -15,6 +15,7 @@ export const AboutImage = () => (
         src="/about_img.jpeg"
         alt="Filosofía Innovarq"
         className="w-full h-full object-cover"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 66vw"
       />
       <div
         className="absolute inset-0"
