@@ -1,5 +1,5 @@
-import { Building2, Facebook, HardHat, Instagram, Key, Linkedin, Wrench } from "lucide-react";
-import type { Project, Service, TeamMember, Testimonial } from "../types";
+import { Building2, Facebook, HardHat, Instagram, Key, Linkedin, Mail, MapPin, Phone, Wrench } from "lucide-react";
+import type { ContactInfoItem, Project, Service, TeamMember, Testimonial } from "../types";
 
 export const PROJECTS: Project[] = [
   {
@@ -157,3 +157,15 @@ export const TESTIMONIALS: Testimonial[] = [
     project: 'Plaza Nexo, Ciudad de México',
   },
 ];
+
+export const CONTACT_ITEMS: ContactInfoItem[] = [
+  { icon: MapPin, label: 'Ubicación', content: ['Av. Presidente Masaryk 111', 'Polanco, Ciudad de México, 11560'] },
+  { icon: Phone, label: 'Teléfono', content: '+52 (55) 4500-1234' },
+  { icon: Mail, label: 'Email', content: 'hola@innovarq.mx' },
+];
+
+export const WHATSAPP_LINK_BASE = 'https://wa.me/541123197085?text=';
+export const MESSAGE_TEMPLATE = '¡Hola Innovarq! Estoy interesado en sus servicios de arquitectura. Me gustaría obtener más información sobre cómo pueden ayudarme a transformar mi espacio. ¿Podrían contactarme para discutir los detalles? Gracias.';
+export const CONTACT_WHATSAPP = (message: string) => `${WHATSAPP_LINK_BASE}${encodeURIComponent(message)}`;
+
+export const CONTACT_HOURS = ['Lunes — Viernes: 9:00 — 18:00 h', 'Sábados: 10:00 — 14:00 h'];

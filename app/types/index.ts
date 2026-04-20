@@ -41,3 +41,9 @@ export interface Testimonial {
   role: string;
   project: string;
 }
+
+export interface ContactInfoItem {
+  icon: React.ComponentType<{ size?: number; color?: string }>;
+  label: string;
+  content: string | string[];
+}
