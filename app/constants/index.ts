@@ -1,5 +1,5 @@
 import { Building2, Facebook, HardHat, Instagram, Key, Linkedin, Mail, MapPin, Phone, Wrench } from "lucide-react";
-import type { ContactInfoItem, Project, Service, TeamMember, Testimonial } from "../types";
+import type { ContactInfoItem, ProcessStep, Project, Service, TeamMember, Testimonial, ValueItem } from "../types";
 
 export const PROJECTS: Project[] = [
   {
@@ -169,3 +169,38 @@ export const MESSAGE_TEMPLATE = '¡Hola Innovarq! Estoy interesado en sus servic
 export const CONTACT_WHATSAPP = (message: string) => `${WHATSAPP_LINK_BASE}${encodeURIComponent(message)}`;
 
 export const CONTACT_HOURS = ['Lunes — Viernes: 9:00 — 18:00 h', 'Sábados: 10:00 — 14:00 h'];
+
+export const STEPS: ProcessStep[] = [
+  {
+    num: '01',
+    title: 'Concepto',
+    desc: 'Escuchamos y analizamos. Entendemos tus necesidades, el entorno y el propósito del espacio para definir una visión estratégica del proyecto.',
+  },
+  {
+    num: '02',
+    title: 'Diseño',
+    desc: 'Transformamos la visión en propuestas visuales. Desarrollamos planos, renders y volumétrías que comunican la esencia del espacio.',
+  },
+  {
+    num: '03',
+    title: 'Planificación',
+    desc: 'Definimos materiales, procesos constructivos, presupuesto y cronograma. Todo calculado para garantizar viabilidad y precisión.',
+  },
+  {
+    num: '04',
+    title: 'Ejecución',
+    desc: 'Materializamos el diseño con supervisión técnica constante. Cada detalle es cuidado para que el resultado supere las expectativas.',
+  },
+];
+
+export const VALUES: ValueItem[] = [
+  { title: 'Diseño centrado en el cliente', desc: 'Cada decisión de diseño parte de entender profundamente a las personas que habitarán el espacio.' },
+  { title: 'Optimización de costos y tiempos', desc: 'Gestionamos los recursos con inteligencia, sin comprometer la calidad ni la visión creativa del proyecto.' },
+  { title: 'Arquitectura que trasciende', desc: 'Creamos obras que perduran en el tiempo, que generan impacto emocional y definen el carácter de un lugar.' },
+];
+
+export const MINI_STATS = [
+  { num: '98%', label: 'Satisfacción' },
+  { num: '12+', label: 'Años' },
+  { num: '180+', label: 'Proyectos' },
+];
