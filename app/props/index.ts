@@ -1,5 +1,5 @@
 import type { MotionValue } from 'motion/react';
-import { NavLink, Project, Service, SocialLink, TeamMember, Testimonial } from "../types";
+import { NavLink, Project, ProcessStep, Service, SocialLink, TeamMember, Testimonial, ValueItem } from "../types";
 
 export interface FooterNavProps {
   links: NavLink[];
@@ -109,4 +109,16 @@ export interface TestimonialsDotsProps {
   onDotClick: (i: number) => void;
   onPrev: () => void;
   onNext: () => void;
+}
+
+// Process
+export interface ProcessStepCardProps {
+  step: ProcessStep;
+  index: number;
+}
+
+// Value
+export interface ValueCardProps {
+  value: ValueItem;
+  index: number;
 }

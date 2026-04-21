@@ -47,3 +47,14 @@ export interface ContactInfoItem {
   label: string;
   content: string | string[];
 }
+
+export interface ProcessStep {
+  num: string;
+  title: string;
+  desc: string;
+}
+
+export interface ValueItem {
+  title: string;
+  desc: string;
+}

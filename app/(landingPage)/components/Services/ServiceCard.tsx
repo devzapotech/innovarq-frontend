@@ -10,7 +10,7 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-5%' }}
       transition={{ delay: index * 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative p-8 md:p-10 cursor-default transition-all duration-500 hover:bg-[#111110]"
+      className="group relative p-8 md:p-10 cursor-default transition-all duration-500"
       style={{ borderTop: '1px solid rgba(17,17,16,0.1)' }}
     >
       {/* Number */}
