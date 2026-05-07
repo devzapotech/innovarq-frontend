@@ -5,11 +5,10 @@ import type { HeroBackgroundProps } from '@/app/props';
 export const HeroBackground = ({ imgY }: HeroBackgroundProps) => (
   <motion.div className="absolute inset-0" style={{ y: imgY }}>
     <Image
-      src="/hero_img.jpeg"
+      src="/imagen principal.png"
       fill
       alt="Arquitectura contemporánea Innovarq"
       className="w-full h-full object-cover"
-      style={{ transform: 'scale(1.1)' }}
     />
     <div
       className="absolute inset-0"

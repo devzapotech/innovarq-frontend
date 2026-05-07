@@ -12,7 +12,7 @@ export const AboutImage = () => (
     <div className="relative overflow-hidden" style={{ aspectRatio: '4/5' }}>
       <Image
         fill
-        src="/about_img.jpeg"
+        src="/about.png"
         alt="Filosofía Innovarq"
         className="w-full h-full object-cover"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 66vw"
@@ -33,7 +33,7 @@ export const AboutImage = () => (
       style={{ backgroundColor: '#111110', minWidth: '160px' }}
     >
       <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '3rem', fontWeight: 300, color: '#f1ede4', lineHeight: 1 }}>
-        12+
+        10+
       </p>
       <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.6rem', color: 'rgba(241,237,228,0.7)', letterSpacing: '0.2em', textTransform: 'uppercase', marginTop: '4px' }}>
         Años de experiencia
@@ -50,7 +50,7 @@ export const AboutImage = () => (
       style={{ border: '1px solid rgba(17,17,16,0.2)', backgroundColor: 'rgba(241,237,228,0.85)', backdropFilter: 'blur(8px)' }}
     >
       <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '2.2rem', fontWeight: 300, color: '#111110', lineHeight: 1 }}>
-        180+
+        100+
       </p>
       <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.58rem', color: 'rgba(17,17,16,0.6)', letterSpacing: '0.18em', textTransform: 'uppercase', marginTop: '3px' }}>
         Proyectos
