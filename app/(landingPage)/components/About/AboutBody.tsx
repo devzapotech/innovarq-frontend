@@ -16,7 +16,8 @@ export const AboutBody = () => (
       marginBottom: '3rem',
     }}
   >
-    Desde 2012, Innovarq ha sido el estudio detrás de proyectos que transforman la arquitectura en experiencias únicas.
-    Nos especializamos en crear espacios que fusionan estética, funcionalidad y emoción.
+    Desde 2018, Innovarq Studio impulsa proyectos que transforman espacios en experiencias reales. 
+    Nos especializamos en reformas integrales donde cada detalle importa: combinamos diseño, funcionalidad y ejecución en obra 
+    para lograr resultados que no solo se ven bien, sino que se viven mejor. 
   </motion.p>
 );

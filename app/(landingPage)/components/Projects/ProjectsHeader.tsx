@@ -21,8 +21,8 @@ export const ProjectsHeader = () => (
       transition={{ delay: 0.1, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
       style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontSize: 'clamp(2.5rem, 5vw, 5rem)', color: '#111110', lineHeight: 1.05 }}
     >
-      Proyectos<br />
-      <span style={{ fontStyle: 'italic', color: '#82866f' }}>seleccionados</span>
+      Proyectos y obras<br />
+      <span style={{ fontStyle: 'italic', color: '#82866f' }}>seleccionadas</span>
     </motion.h2>
   </div>
 );

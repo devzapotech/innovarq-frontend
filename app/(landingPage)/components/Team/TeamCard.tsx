@@ -19,8 +19,10 @@ export function TeamCard({ member, index }: TeamCardProps) {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <Image
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            // fill
+            // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            width={300}
+            height={350}
             src={member.img}
             alt={member.name}
             className="w-full h-full object-cover"
@@ -29,7 +31,7 @@ export function TeamCard({ member, index }: TeamCardProps) {
         </motion.div>
         {/* Overlay on hover */}
         <div
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6"
+          className="absolute inset-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6"
           style={{ background: 'linear-gradient(to top, rgba(17,17,16,0.7) 0%, transparent 50%)' }}
         >
           <p style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontStyle: 'italic', fontSize: '1rem', color: '#f1ede4', lineHeight: 1.5 }}>
