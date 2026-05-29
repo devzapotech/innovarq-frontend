@@ -46,7 +46,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
           <motion.p
             animate={{ y: hovered ? -8 : 0, opacity: hovered ? 0 : 1 }}
             transition={{ duration: 0.4 }}
-            style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.6rem', color: '#82866f', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '4px' }}
+            style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.6rem', color: 'white', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '4px' }}
           >
             {project.category} — {project.year}
           </motion.p>

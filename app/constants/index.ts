@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
     id: 1,
     name: 'Casa Bosquecitos',
     location: 'Provincia Buenos Aires',
-    category: 'Residencial',
+    category: 'Reforma integral, ampliación y nueva fachada',
     year: '2021',
     img: '/bosquecitos.webp',
     size: 'large',
@@ -15,16 +15,16 @@ export const PROJECTS: Project[] = [
     id: 2,
     name: 'Casa Lomas',
     location: 'Provincia Buenos Aires',
-    category: 'Comercial',
+    category: 'Reforma integral',
     year: '2026',
     img: '/lomas.jpg',
     size: 'small',
   },
   {
     id: 3,
-    name: 'Departament Entre Ríos',
+    name: 'Departamento Entre Ríos',
     location: 'Capital Federal',
-    category: 'Interiorismo',
+    category: 'Reforma integral',
     year: '2026',
     img: '/entre_rios.png',
     size: 'small',
@@ -33,7 +33,7 @@ export const PROJECTS: Project[] = [
     id: 4,
     name: 'Departamento Viamonte',
     location: 'Capital Federal',
-    category: 'Residencial',
+    category: 'Reforma integral',
     year: '2025',
     img: '/viamonte.jpg',
     size: 'large',
@@ -41,8 +41,8 @@ export const PROJECTS: Project[] = [
   {
     id: 5,
     name: 'Baños',
-    location: '',
-    category: 'Comercial',
+    location: 'Buenos Aires',
+    category: 'Reformas desde',
     year: '2022',
     img: '/baños.png',
     size: 'small',
@@ -50,8 +50,8 @@ export const PROJECTS: Project[] = [
   {
     id: 6,
     name: 'Interiorismo',
-    location: 'Querétaro, Qro.',
-    category: 'Interiorismo',
+    location: 'Buenos Aires',
+    category: 'Proyectos',
     year: '2024',
     img: '/interiorismo.png',
     size: 'small',
@@ -143,12 +143,12 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const CONTACT_ITEMS: ContactInfoItem[] = [
-  { icon: MapPin, label: 'Ubicación', content: ['Av. Presidente Masaryk 111', 'Polanco, Ciudad de México, 11560'] },
-  { icon: Phone, label: 'Teléfono', content: '+52 (55) 4500-1234' },
-  { icon: Mail, label: 'Email', content: 'hola@innovarq.mx' },
+  { icon: MapPin, label: 'Ubicación', content: ['Capital Federal, Buenos Aires, Argentina'] },
+  { icon: Phone, label: 'Teléfono', content: '+54 9 11 5598 - 1705' },
+  { icon: Mail, label: 'Email', content: 'acrear@innovarqstudio.com' },
 ];
 
-export const WHATSAPP_LINK_BASE = 'https://wa.me/541123197085?text=';
+export const WHATSAPP_LINK_BASE = 'https://wa.me/541155981705?text=';
 export const MESSAGE_TEMPLATE = '¡Hola Innovarq! Estoy interesado en sus servicios de arquitectura. Me gustaría obtener más información sobre cómo pueden ayudarme a transformar mi espacio. ¿Podrían contactarme para discutir los detalles? Gracias.';
 export const CONTACT_WHATSAPP = (message: string) => `${WHATSAPP_LINK_BASE}${encodeURIComponent(message)}`;
 
