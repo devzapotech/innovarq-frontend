@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import type { ProjectsGridProps } from '@/app/props';
 import { ProjectCard } from './ProjectCard';
 
-export const ProjectsGrid = ({ projects, activeFilter }: ProjectsGridProps) => (
+export const ProjectsGrid = ({ projects, activeFilter, onCardClick }: ProjectsGridProps) => (
   <AnimatePresence mode="wait">
     <motion.div
       key={activeFilter}
@@ -13,7 +13,7 @@ export const ProjectsGrid = ({ projects, activeFilter }: ProjectsGridProps) => (
       className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6"
     >
       {projects.map((project, i) => (
-        <ProjectCard key={project.id} project={project} index={i} />
+        <ProjectCard key={project.id} project={project} index={i} onClick={() => onCardClick(project)} />
       ))}
     </motion.div>
   </AnimatePresence>

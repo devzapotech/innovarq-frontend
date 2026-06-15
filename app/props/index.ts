@@ -65,6 +65,7 @@ export interface HeroScrollIndicatorProps {
 export interface ProjectCardProps {
   project: Project;
   index: number;
+  onClick: () => void;
 }
 
 export interface ProjectsFilterProps {
@@ -76,6 +77,44 @@ export interface ProjectsFilterProps {
 export interface ProjectsGridProps {
   projects: Project[];
   activeFilter: string;
+  onCardClick: (project: Project) => void;
+}
+
+export interface ProjectModalProps {
+  project: Project;
+  onClose: () => void;
+}
+
+export interface ProjectModalInfoProps {
+  name: string;
+  description: string;
+  location: string;
+  year: string;
+  category: string;
+}
+
+export interface ProjectModalCarouselProps {
+  photos: string[];
+  projectName: string;
+  showBeforeAfter?: boolean;
+}
+
+export interface ProjectModalCarouselImageProps {
+  src: string;
+  alt: string;
+  direction: number;
+  label?: 'Antes' | 'Después';
+}
+
+export interface ProjectModalCarouselControlsProps {
+  onPrev: () => void;
+  onNext: () => void;
+}
+
+export interface ProjectModalCarouselDotsProps {
+  total: number;
+  current: number;
+  onDotClick: (i: number) => void;
 }
 
 // Services
