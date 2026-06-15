@@ -17,6 +17,9 @@ export interface Project {
   year: string;
   img: string;
   size: 'large' | 'small';
+  description: string;
+  photos: string[];
+  showBeforeAfter?: boolean;
 }
 
 export interface Service {

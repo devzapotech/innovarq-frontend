@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import type { ProjectCardProps } from '@/app/props';
 
-export const ProjectCard = ({ project, index }: ProjectCardProps) => {
+export const ProjectCard = ({ project, index, onClick }: ProjectCardProps) => {
   const [hovered, setHovered] = useState(false);
   const isLarge = project.size === 'large';
 
@@ -16,6 +16,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
       transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
       className={`relative overflow-hidden cursor-pointer group ${isLarge ? 'md:col-span-2' : ''}`}
       style={{ aspectRatio: isLarge ? '16/9' : '4/5' }}
+      onClick={onClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
