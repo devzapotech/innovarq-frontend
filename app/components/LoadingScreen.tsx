@@ -13,7 +13,7 @@ export const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
 
   useEffect(() => {
     const start = performance.now();
-    const duration = 2200;
+    const duration = 400 + Math.random() * 1800;
 
     const animate = (now: number) => {
       const elapsed = now - start;

@@ -16,7 +16,7 @@ export function ProjectsSection() {
 
   const filtered = activeFilter === 'Todos'
     ? PROJECTS
-    : PROJECTS.filter(p => p.category === activeFilter);
+    : PROJECTS.filter(p => p.type === activeFilter);
 
   return (
     <>

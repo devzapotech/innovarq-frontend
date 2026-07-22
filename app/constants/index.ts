@@ -21,6 +21,7 @@ export const PROJECTS: Project[] = [
       '/bosquecitos_3_desp.webp',
       '/bosquecitos_4_desp.webp',
     ],
+    type: 'Otros',
   },
   {
     id: 2,
@@ -39,6 +40,7 @@ export const PROJECTS: Project[] = [
       '/lomas_2_desp.webp',
       '/lomas_3_desp.webp',
     ],
+    type: 'Otros',
   },
   {
     id: 3,
@@ -59,6 +61,7 @@ export const PROJECTS: Project[] = [
       '/entrerios_3_desp.webp',
       '/entrerios_4_desp.webp',
     ],
+    type: 'Residencial',
   },
   {
     id: 4,
@@ -79,6 +82,7 @@ export const PROJECTS: Project[] = [
       '/viamonte_desp_3.webp',
       '/viamonte_desp_4.webp',
     ],
+    type: 'Residencial',
   },
   {
     id: 5,
@@ -101,6 +105,7 @@ export const PROJECTS: Project[] = [
       '/baños_9.webp',
     ],
     showBeforeAfter: false,
+    type: 'Otros',
   },
   {
     id: 6,
@@ -122,6 +127,7 @@ export const PROJECTS: Project[] = [
 
     ],
     showBeforeAfter: false,
+    type: 'Interiorismo',
   },
 ];
 
@@ -163,9 +169,8 @@ export const LINKS = [
 ];
 
 export const SOCIAL = [
-  { icon: Instagram, label: 'Instagram', href: 'https://instagram.com' },
-  { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com' },
-  { icon: Facebook, label: 'Facebook', href: 'https://facebook.com' },
+  { icon: Instagram, label: 'Instagram', href: 'https://www.instagram.com/studio_innovarq' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/innovarq-studio/' }
 ];
 
 export const KEYWORDS = ['Innovación', 'Sostenibilidad', 'Diseño Integral'];

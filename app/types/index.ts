@@ -20,6 +20,7 @@ export interface Project {
   description: string;
   photos: string[];
   showBeforeAfter?: boolean;
+  type: 'Residencial' | 'Comercial' | 'Interiorismo' | 'Otros';
 }
 
 export interface Service {

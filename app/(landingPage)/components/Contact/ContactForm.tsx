@@ -123,7 +123,7 @@ export const ContactForm = () => {
               type="tel"
               value={form.telefono}
               onChange={handleChange}
-              placeholder="+52 (55) 0000-0000"
+              placeholder="+54  0000-0000"
               className="w-full outline-none transition-all duration-300 focus:border-[#82866f]"
               style={inputStyle}
             />
