@@ -12,7 +12,7 @@ export const AboutImage = () => (
     <div className="relative overflow-hidden" style={{ aspectRatio: '4/5' }}>
       <Image
         fill
-        src="/about.png"
+        src="/about.webp"
         alt="Filosofía Innovarq"
         className="w-full h-full object-cover"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 66vw"
