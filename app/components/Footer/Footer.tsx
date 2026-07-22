@@ -22,9 +22,9 @@ export const Footer = () => {
           <FooterBrand onScrollTop={scrollTop} />
           <FooterNav links={LINKS} onNav={handleNav} />
           <FooterContact
-            addressLines={['Av. Masaryk 111, Polanco', 'Ciudad de México, 11560']}
-            phone="+52 (55) 4500-1234"
-            email="hola@innovarq.mx"
+            addressLines={['Buenos Aires','Argentina']}
+            phone="+54 9 11 5598 1705"
+            email="arquitectura@studioinnovarq.com"
             social={SOCIAL}
           />
         </div>
