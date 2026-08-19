@@ -6,6 +6,7 @@ import { Footer } from "./components/Footer/Footer";
 import { useState } from "react";
 import Header from "./components/Header/Header";
 import { GrainOverlay } from "./components/GrainOverlay";
+import { WhatsAppFAB } from "./components/WhatsAppFAB";
 
 const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,6 +20,8 @@ const LayoutWrapper = ({ children }: { children: React.ReactNode }) => {
     <div>
       {/* Grain texture overlay */}
       <GrainOverlay />
+      {/* WhatsApp floating action button */}
+      <WhatsAppFAB />
       {/* Loading screen */}
       <AnimatePresence>
         {isLoading && (

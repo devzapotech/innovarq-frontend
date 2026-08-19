@@ -15,6 +15,5 @@ export const HeroLabel = () => (
       marginBottom: '1.5rem',
     }}
   >
-    ✦ &nbsp; Estudio de Arquitectura &nbsp; ✦
   </motion.p>
 );

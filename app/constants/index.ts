@@ -131,7 +131,7 @@ export const PROJECTS: Project[] = [
   },
 ];
 
-export const PROJECT_FILTERS = ['Todos', 'Residencial', 'Comercial', 'Interiorismo'];
+export const PROJECT_FILTERS = ['Todos', 'Residencial', 'Interiorismo'];
 
 export const SERVICES: Service[] = [
   {
@@ -200,18 +200,67 @@ export const TEAM: TeamMember[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
-    quote: 'No solo construye espacios increíbles, también sabe cómo habitarlos con estilo. Arquitecta por dentro y por fuera. Detrás de cada gran obra hay una gran arquitecta. Y detrás de esos lentes, una mujer que diseña sueños.Gracias Jenny por ayudarme a cumplir mi sueño ❤️',
+    quote: 'No solo construye espacios increíbles, también sabe cómo habitarlos con estilo. Arquitecta por dentro y por fuera. Detrás de cada gran obra hay una gran arquitecta. Y detrás de esos lentes, una mujer que diseña sueños. Gracias Jenny por ayudarme a cumplir mi sueño ❤️',
     author: 'Cari Solari',
     role: '',
     project: 'Obra Almagro',
   },
   {
     id: 2,
-    quote: 'Nos acompañan en el diseño y en la obra de principio a fin. Se ocupan de todo, además de dejar mi casa como la quería. Gracias por escucharme en todo momento para lograr un hermoso resultado lleno de comodidad. ',
+    quote: 'Nos acompañan en el diseño y en la obra de principio a fin. Se ocupan de todo, además de dejar mi casa como la quería. Gracias por escucharme en todo momento para lograr un hermoso resultado lleno de comodidad.',
     author: 'Elena Rodriguez',
     role: '',
     project: 'Obra Rivadavia',
-  }
+  },
+  {
+    id: 3,
+    quote: 'Desde el primer boceto hasta la última terminación, el equipo entendió exactamente lo que buscábamos. La comunicación fue clara en cada etapa y el resultado superó nuestras expectativas.',
+    author: 'Martín Gauna',
+    role: '',
+    project: 'Casa Bosquecitos',
+  },
+  {
+    id: 4,
+    quote: 'Profesionalismo y calidez en partes iguales. Supieron traducir ideas muy generales en un espacio funcional, cálido y con mucha personalidad. Totalmente recomendables.',
+    author: 'Valeria Cortez',
+    role: '',
+    project: 'Departamento Viamonte',
+  },
+  {
+    id: 5,
+    quote: 'La dirección de obra fue impecable: tiempos cumplidos, presupuesto respetado y una atención al detalle que se nota en cada rincón de la casa.',
+    author: 'Diego Fernández',
+    role: '',
+    project: 'Casa Lomas',
+  },
+  {
+    id: 6,
+    quote: 'Lograron optimizar cada metro cuadrado del departamento sin perder calidez. Hoy es un espacio que refleja exactamente quiénes somos.',
+    author: 'Sofía Almada',
+    role: '',
+    project: 'Departamento Entre Ríos',
+  },
+  {
+    id: 7,
+    quote: 'Confiamos el proyecto llave en mano y fue la mejor decisión. Un solo interlocutor, cero dolores de cabeza y un resultado final excelente.',
+    author: 'Pablo Ibáñez',
+    role: '',
+    project: 'Obra Almagro',
+  },
+  {
+    id: 8,
+    quote: 'El baño quedó mucho mejor de lo que imaginábamos. Propusieron soluciones que no habíamos considerado y que hoy usamos todos los días.',
+    author: 'Carolina Méndez',
+    role: '',
+    project: 'Reforma de Baño',
+  },
+  {
+    id: 9,
+    quote: 'Un equipo que escucha de verdad. Cada ajuste que pedimos durante la obra se resolvió con criterio profesional y buena predisposición.',
+    author: 'Nicolás Suárez',
+    role: '',
+    project: 'Obra Rivadavia',
+  },
 ];
 
 export const CONTACT_ITEMS: ContactInfoItem[] = [
