@@ -11,7 +11,7 @@ export const HeaderLogo = ({ scrolled, onNav }: HeaderLogoProps) => (
     <Image
       src={scrolled ? '/logo_transparente_negro.webp' : '/logo_transparente_blanco.webp'}
       alt="Innovarq Logo"
-      width={150}
+      width={220}
       height={50}
     />
   </button>

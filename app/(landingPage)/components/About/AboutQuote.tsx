@@ -50,7 +50,7 @@ export const AboutQuote = () => (
           marginBottom: '2.5rem',
         }}
       >
-        conectar con el entorno y redefinir la experiencia del espacio
+        Conectar desde el interior para redefinir la experiencia del espacio.
       </h2>
     </RevealText>
   </>

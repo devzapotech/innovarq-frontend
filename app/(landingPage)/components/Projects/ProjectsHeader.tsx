@@ -11,7 +11,7 @@ export const ProjectsHeader = () => (
     >
       <div style={{ width: '40px', height: '1px', backgroundColor: '#82866f' }} />
       <span style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.6rem', color: '#82866f', letterSpacing: '0.35em', textTransform: 'uppercase' }}>
-        Portafolio
+        Portfolio
       </span>
     </motion.div>
     <motion.h2

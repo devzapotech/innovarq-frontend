@@ -117,6 +117,17 @@ export interface ProjectModalCarouselDotsProps {
   onDotClick: (i: number) => void;
 }
 
+export interface ProjectModalLightboxProps {
+  photos: string[];
+  projectName: string;
+  current: number;
+  direction: number;
+  showBeforeAfter: boolean;
+  onPrev: () => void;
+  onNext: () => void;
+  onClose: () => void;
+}
+
 // Services
 export interface ServiceCardProps {
   service: Service;
@@ -136,7 +147,7 @@ export interface TestimonialsHeaderProps {
 }
 
 export interface TestimonialSlideProps {
-  testimonial: Testimonial;
+  testimonials: Testimonial[];
   direction: number;
   current: number;
   total: number;
