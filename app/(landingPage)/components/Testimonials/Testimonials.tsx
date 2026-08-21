@@ -36,6 +36,8 @@ export function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
 
+  const safeCurrent = Math.min(current, pages.length - 1);
+
   useEffect(() => {
     setCurrent(0);
   }, [perPage]);
@@ -91,10 +93,10 @@ export function TestimonialsSection() {
         <div className="relative overflow-hidden md:min-h-[360px]">
           <AnimatePresence mode="wait" custom={direction}>
             <TestimonialSlide
-              key={current}
-              testimonials={pages[current]}
+              key={safeCurrent}
+              testimonials={pages[safeCurrent]}
               direction={direction}
-              current={current}
+              current={safeCurrent}
               total={pages.length}
               onSwipe={handleSwipe}
             />
@@ -102,7 +104,7 @@ export function TestimonialsSection() {
         </div>
         <TestimonialsDots
           total={pages.length}
-          current={current}
+          current={safeCurrent}
           onDotClick={handleDotClick}
         />
       </div>

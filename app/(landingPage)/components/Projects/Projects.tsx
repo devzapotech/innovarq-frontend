@@ -8,11 +8,13 @@ import { ProjectsHeader } from './ProjectsHeader';
 import { ProjectsFilter } from './ProjectsFilter';
 import { ProjectsGrid } from './ProjectsGrid';
 import { ProjectsViewAll } from './ProjectsViewAll';
+import { ProjectsAllModal } from './ProjectsAllModal';
 import { ProjectModal } from './ProjectModal/ProjectModal';
 
 export function ProjectsSection() {
   const [activeFilter, setActiveFilter] = useState('Todos');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [showAllModal, setShowAllModal] = useState(false);
 
   const filtered = activeFilter === 'Todos'
     ? PROJECTS
@@ -35,9 +37,18 @@ export function ProjectsSection() {
             activeFilter={activeFilter}
             onCardClick={setSelectedProject}
           />
-          <ProjectsViewAll />
+          <ProjectsViewAll onClick={() => setShowAllModal(true)} />
         </div>
       </section>
+      <AnimatePresence>
+        {showAllModal && (
+          <ProjectsAllModal
+            projects={PROJECTS}
+            onClose={() => setShowAllModal(false)}
+            onSelectProject={setSelectedProject}
+          />
+        )}
+      </AnimatePresence>
       <AnimatePresence>
         {selectedProject && (
           <ProjectModal

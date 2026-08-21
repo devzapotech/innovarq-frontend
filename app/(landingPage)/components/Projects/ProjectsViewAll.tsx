@@ -1,7 +1,8 @@
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
+import type { ProjectsViewAllProps } from '@/app/props';
 
-export const ProjectsViewAll = () => (
+export const ProjectsViewAll = ({ onClick }: ProjectsViewAllProps) => (
   <motion.div
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
@@ -10,6 +11,7 @@ export const ProjectsViewAll = () => (
     className="mt-16 flex justify-center"
   >
     <button
+      onClick={onClick}
       className="group flex items-center gap-3 py-3 transition-all duration-300"
       style={{
         fontFamily: "'Inter', sans-serif",
