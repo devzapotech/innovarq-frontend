@@ -22,7 +22,7 @@ export const PROJECTS: Project[] = [
     location: 'Provincia Buenos Aires',
     category: 'Reforma integral, ampliación y nueva fachada',
     year: '2021',
-    img: '/bosquecitos.webp',
+    img: '/bosquecitos/cover/bosquecitos_1.webp',
     size: 'large',
     description: 'Reforma integral que incluye ampliación de planta baja, rediseño completo de fachada y renovación de todos los espacios interiores. El proyecto integra el entorno natural con la vivienda mediante materiales cálidos y una paleta neutra.',
     photos: [
@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
     location: 'Capital Federal',
     category: 'Reforma integral',
     year: '2026',
-    img: '/entre_rios.webp',
+    img: '/entrerios/cover/rios_1.png',
     size: 'small',
     description: 'Reforma integral de departamento en planta baja con patio. Diseño de cocina abierta, remodelación de baños y renovación de terminaciones con materiales de alta durabilidad.',
     photos: [
