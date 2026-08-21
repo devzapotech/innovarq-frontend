@@ -9,6 +9,11 @@ export interface SocialLink {
   href: string;
 }
 
+export interface ProjectPhoto {
+  src: string;
+  label?: 'Antes' | 'Después';
+}
+
 export interface Project {
   id: number;
   name: string;
@@ -18,8 +23,7 @@ export interface Project {
   img: string;
   size: 'large' | 'small';
   description: string;
-  photos: string[];
-  showBeforeAfter?: boolean;
+  photos: ProjectPhoto[];
   type: 'Residencial' | 'Comercial' | 'Interiorismo' | 'Otros';
 }
 

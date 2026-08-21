@@ -9,7 +9,7 @@ import { ProjectModalCarouselControls } from './ProjectModalCarouselControls';
 import { ProjectModalCarouselDots } from './ProjectModalCarouselDots';
 import { ProjectModalLightbox } from './ProjectModalLightbox';
 
-export const ProjectModalCarousel = ({ photos, projectName, showBeforeAfter = true }: ProjectModalCarouselProps) => {
+export const ProjectModalCarousel = ({ photos, projectName }: ProjectModalCarouselProps) => {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(1);
   const [fullscreen, setFullscreen] = useState(false);
@@ -27,11 +27,11 @@ export const ProjectModalCarousel = ({ photos, projectName, showBeforeAfter = tr
       <div className="relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
         <AnimatePresence initial={false} custom={direction}>
           <ProjectModalCarouselImage
-            key={photos[current]}
-            src={photos[current]}
+            key={photos[current].src}
+            src={photos[current].src}
             alt={`${projectName} — foto ${current + 1}`}
             direction={direction}
-            label={showBeforeAfter ? (current < Math.ceil(photos.length / 2) ? 'Antes' : 'Después') : undefined}
+            label={photos[current].label}
           />
         </AnimatePresence>
         {photos.length > 1 && (
@@ -68,7 +68,6 @@ export const ProjectModalCarousel = ({ photos, projectName, showBeforeAfter = tr
             projectName={projectName}
             current={current}
             direction={direction}
-            showBeforeAfter={showBeforeAfter}
             onPrev={prev}
             onNext={next}
             onClose={() => setFullscreen(false)}

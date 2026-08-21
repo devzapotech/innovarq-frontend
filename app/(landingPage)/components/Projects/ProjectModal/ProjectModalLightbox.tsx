@@ -13,7 +13,6 @@ export const ProjectModalLightbox = ({
   projectName,
   current,
   direction,
-  showBeforeAfter,
   onPrev,
   onNext,
   onClose,
@@ -36,7 +35,7 @@ export const ProjectModalLightbox = ({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
-      className="fixed inset-0 z-[110] flex items-center justify-center p-4 md:p-10"
+      className="fixed inset-0 z-[130] flex items-center justify-center p-4 md:p-10"
       style={{ backgroundColor: 'rgba(10,10,9,0.97)' }}
       onClick={onClose}
       role="dialog"
@@ -55,11 +54,11 @@ export const ProjectModalLightbox = ({
       <div className="relative w-full h-full" onClick={(e) => e.stopPropagation()}>
         <AnimatePresence initial={false} custom={direction}>
           <ProjectModalCarouselImage
-            key={photos[current]}
-            src={photos[current]}
+            key={photos[current].src}
+            src={photos[current].src}
             alt={`${projectName} — foto ${current + 1}`}
             direction={direction}
-            label={showBeforeAfter ? (current < Math.ceil(photos.length / 2) ? 'Antes' : 'Después') : undefined}
+            label={photos[current].label}
           />
         </AnimatePresence>
         {photos.length > 1 && (

@@ -1,5 +1,5 @@
 import type { MotionValue } from 'motion/react';
-import { NavLink, Project, ProcessStep, Service, SocialLink, TeamMember, Testimonial, ValueItem } from "../types";
+import { NavLink, Project, ProjectPhoto, ProcessStep, Service, SocialLink, TeamMember, Testimonial, ValueItem } from "../types";
 
 export interface FooterNavProps {
   links: NavLink[];
@@ -80,6 +80,16 @@ export interface ProjectsGridProps {
   onCardClick: (project: Project) => void;
 }
 
+export interface ProjectsViewAllProps {
+  onClick: () => void;
+}
+
+export interface ProjectsAllModalProps {
+  projects: Project[];
+  onClose: () => void;
+  onSelectProject: (project: Project) => void;
+}
+
 export interface ProjectModalProps {
   project: Project;
   onClose: () => void;
@@ -94,9 +104,8 @@ export interface ProjectModalInfoProps {
 }
 
 export interface ProjectModalCarouselProps {
-  photos: string[];
+  photos: ProjectPhoto[];
   projectName: string;
-  showBeforeAfter?: boolean;
 }
 
 export interface ProjectModalCarouselImageProps {
@@ -118,11 +127,10 @@ export interface ProjectModalCarouselDotsProps {
 }
 
 export interface ProjectModalLightboxProps {
-  photos: string[];
+  photos: ProjectPhoto[];
   projectName: string;
   current: number;
   direction: number;
-  showBeforeAfter: boolean;
   onPrev: () => void;
   onNext: () => void;
   onClose: () => void;

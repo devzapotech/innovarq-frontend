@@ -25,7 +25,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+      className="fixed inset-0 z-[120] flex items-center justify-center p-4 md:p-8"
       style={{ backgroundColor: 'rgba(17,17,16,0.85)', backdropFilter: 'blur(8px)' }}
       onClick={onClose}
       role="dialog"
@@ -52,7 +52,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
         {/* Carousel — top on mobile, right on desktop */}
         <div className="w-full order-1 md:order-2" style={{ backgroundColor: '#111110' }}>
-          <ProjectModalCarousel photos={project.photos} projectName={project.name} showBeforeAfter={project.showBeforeAfter ?? true} />
+          <ProjectModalCarousel photos={project.photos} projectName={project.name} />
         </div>
 
         {/* Info — bottom on mobile, left on desktop */}
