@@ -151,14 +151,13 @@ export interface TestimonialSlideProps {
   direction: number;
   current: number;
   total: number;
+  onSwipe: (direction: 1 | -1) => void;
 }
 
 export interface TestimonialsDotsProps {
   total: number;
   current: number;
   onDotClick: (i: number) => void;
-  onPrev: () => void;
-  onNext: () => void;
 }
 
 // Process

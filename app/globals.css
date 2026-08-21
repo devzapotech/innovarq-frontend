@@ -98,6 +98,7 @@ textarea::placeholder {
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 ::-webkit-scrollbar-track {
   background: #111110;
@@ -108,6 +109,20 @@ textarea::placeholder {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #a0a48c;
+}
+
+/* Hide scrollbar for horizontal swipe carousels */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar-track,
+.no-scrollbar::-webkit-scrollbar-thumb {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
 }
 
 /* Selection color */

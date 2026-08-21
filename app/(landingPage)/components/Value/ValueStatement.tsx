@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 
 export const ValueStatement = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 mb-20 items-end">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 lg:gap-24 mb-10 md:mb-20 items-end">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -26,10 +26,10 @@ export const ValueStatement = () => {
         transition={{ delay: 0.3, duration: 0.8 }}
         className="lg:self-end"
       >
-        <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.9rem', fontWeight: 300, color: 'rgba(17,17,16,0.55)', lineHeight: 1.9, marginBottom: '2rem' }}>
+        <p className="mb-0 md:mb-8" style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.9rem', fontWeight: 300, color: 'rgba(17,17,16,0.55)', lineHeight: 1.9 }}>
           En Innovarq, combinamos rigor técnico, creatividad genuina y un profundo entendimiento del espacio habitado para entregar proyectos que transforman vidas.
         </p>
-        <div className="flex gap-8">
+        <div className="hidden md:flex gap-8">
           {MINI_STATS.map((s) => (
             <div key={s.label}>
               <p style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '2.5rem', fontWeight: 300, color: '#111110', lineHeight: 1 }}>{s.num}</p>
