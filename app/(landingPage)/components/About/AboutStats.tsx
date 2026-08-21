@@ -8,7 +8,7 @@ export const AboutStats = () => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ delay: 0.3, duration: 0.9 }}
-    className="mt-28 md:mt-36 flex flex-wrap justify-around gap-y-8 pt-12"
+    className="mt-10 md:mt-36 flex flex-wrap justify-around gap-y-8 pt-10 md:pt-12"
     style={{ borderTop: '1px solid rgba(17,17,16,0.15)' }}
   >
     {STATS.map((stat) => (

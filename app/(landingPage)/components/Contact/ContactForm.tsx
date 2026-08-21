@@ -149,7 +149,7 @@ export const ContactForm = () => {
           <button
             type="submit"
             disabled={loading}
-            className="mt-4 flex items-center gap-3 px-8 py-4 transition-all duration-300 cursor-pointer hover:bg-[#111110] hover:text-[#f1ede4]"
+            className="mt-4 flex items-center justify-center gap-3 px-8 py-4 self-center md:self-start transition-all duration-300 cursor-pointer hover:bg-[#111110] hover:text-[#f1ede4]"
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: '0.65rem',
@@ -159,7 +159,6 @@ export const ContactForm = () => {
               backgroundColor: 'transparent',
               color: '#111110',
               border: '1px solid rgba(17,17,16,0.4)',
-              alignSelf: 'flex-start',
             }}
           >
             {loading ? 'Enviando...' : 'Enviar mensaje'}
