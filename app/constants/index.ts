@@ -136,14 +136,16 @@ export const TESTIMONIALS: Testimonial[] = [
 export const CONTACT_ITEMS: ContactInfoItem[] = [
   { icon: MapPin, label: 'Ubicación', content: ['Capital Federal, Buenos Aires, Argentina'] },
   { icon: Phone, label: 'Teléfono', content: '+54 9 11 5598 - 1705' },
-  { icon: Mail, label: 'Email', content: 'acrear@innovarqstudio.com' },
+  { icon: Mail, label: 'Email', content: 'consultas.innovarquitectos@gmail.com' },
 ];
 
 export const WHATSAPP_LINK_BASE = 'https://wa.me/541155981705?text=';
 export const MESSAGE_TEMPLATE = '¡Hola Innovarq! Estoy interesado en sus servicios de arquitectura. Me gustaría obtener más información sobre cómo pueden ayudarme a transformar mi espacio. ¿Podrían contactarme para discutir los detalles? Gracias.';
 export const CONTACT_WHATSAPP = (message: string) => `${WHATSAPP_LINK_BASE}${encodeURIComponent(message)}`;
 
-export const CONTACT_HOURS = ['Lunes — Viernes: 9:00 — 18:00 h', 'Sábados: 10:00 — 14:00 h'];
+export const CONTACT_TOPICS = ['Obra nueva', 'Remodelación', 'Interiorismo', 'Otra consulta'];
+
+export const CONTACT_HOURS = ['Lunes — Viernes: 9:00 — 18:00 h', 'Sábados: 09:00 — 12:00 h'];
 
 export const STEPS: ProcessStep[] = [
   {
