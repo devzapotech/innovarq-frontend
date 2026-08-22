@@ -1,47 +1,25 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Send } from 'lucide-react';
-import { CONTACT_WHATSAPP } from '@/app/constants';
+import { MessageCircle } from 'lucide-react';
+import { CONTACT_WHATSAPP, CONTACT_TOPICS } from '@/app/constants';
 
 export const ContactForm = () => {
-  const [form, setForm] = useState({ nombre: '', email: '', telefono: '', mensaje: '' });
-  const [sent, setSent] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [topic, setTopic] = useState(CONTACT_TOPICS[0]);
+  const [detail, setDetail] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm(f => ({ ...f, [e.target.name]: e.target.value }));
-  };
+  const message = `¡Hola! Quiero consultar por ${topic.toLowerCase()}.${detail.trim() ? ` ${detail.trim()}` : ''}`;
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-
-    const message = [
-      `¡Hola Innovarq! Mi nombre es ${form.nombre}.`,
-      `Email: ${form.email}`,
-      form.telefono ? `📞 Teléfono: ${form.telefono}` : null,
-      `Mensaje: ${form.mensaje}`,
-    ]
-      .filter(Boolean)
-      .join('\n');
-
-    setTimeout(() => {
-      setLoading(false);
-      setSent(true);
-      window.open(CONTACT_WHATSAPP(message), '_blank', 'noopener,noreferrer');
-    }, 1500);
-  };
-
-  const inputStyle: React.CSSProperties = {
+  const chipStyle = (active: boolean): React.CSSProperties => ({
     fontFamily: "'Inter', sans-serif",
-    fontSize: '0.85rem',
-    fontWeight: 300,
-    color: '#111110',
-    backgroundColor: 'transparent',
-    border: 'none',
-    borderBottom: '1px solid rgba(17,17,16,0.3)',
-    padding: '10px 0',
-  };
+    fontSize: '0.75rem',
+    letterSpacing: '0.03em',
+    padding: '12px 18px',
+    cursor: 'pointer',
+    transition: 'background-color 0.2s ease, color 0.2s ease',
+    backgroundColor: active ? '#111110' : 'transparent',
+    color: active ? '#f1ede4' : '#111110',
+    border: active ? '1px solid #111110' : '1px solid rgba(17,17,16,0.4)',
+  });
 
   const labelStyle: React.CSSProperties = {
     fontFamily: "'Inter', sans-serif",
@@ -59,113 +37,89 @@ export const ContactForm = () => {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ delay: 0.2, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+      className="flex flex-col gap-8"
     >
-      {sent ? (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col items-center justify-center py-20 text-center"
+      {/* Topic */}
+      <div>
+        <label style={labelStyle}>¿Sobre qué querés consultar?</label>
+        <div className="flex flex-wrap gap-2.5">
+          {CONTACT_TOPICS.map((t) => (
+            <button
+              key={t}
+              type="button"
+              onClick={() => setTopic(t)}
+              style={chipStyle(topic === t)}
+            >
+              {t}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Detail */}
+      <div>
+        <label htmlFor="detalle" style={labelStyle}>
+          Contanos un poco más <span style={{ textTransform: 'none', letterSpacing: 'normal', opacity: 0.6 }}>(opcional)</span>
+        </label>
+        <textarea
+          id="detalle"
+          name="detalle"
+          value={detail}
+          onChange={(e) => setDetail(e.target.value)}
+          rows={4}
+          placeholder="Ej.: departamento de 60 m² en Palermo, quiero renovar cocina y baño."
+          className="w-full outline-none transition-all duration-300 focus:border-[#82866f] resize-none"
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: '0.85rem',
+            fontWeight: 300,
+            color: '#111110',
+            backgroundColor: 'transparent',
+            border: 'none',
+            borderBottom: '1px solid rgba(17,17,16,0.3)',
+            padding: '10px 0',
+          }}
+        />
+      </div>
+
+      {/* Preview */}
+      <div>
+        <label style={labelStyle}>Se abre WhatsApp con este mensaje</label>
+        <p
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: '0.8rem',
+            fontWeight: 300,
+            color: 'rgba(17,17,16,0.75)',
+            lineHeight: 1.7,
+            backgroundColor: 'rgba(241,237,228,0.55)',
+            padding: '16px 20px',
+          }}
         >
-          <div
-            className="flex items-center justify-center mb-6"
-            style={{ width: '64px', height: '64px', border: '1px solid #82866f' }}
-          >
-            <Send size={24} color="#82866f" />
-          </div>
-          <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: '2rem', fontWeight: 300, color: '#111110', marginBottom: '1rem' }}>
-            ¡Mensaje recibido!
-          </h3>
-          <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.85rem', fontWeight: 300, color: 'rgba(17,17,16,0.65)', lineHeight: 1.8 }}>
-            Nos pondremos en contacto contigo en menos de 24 horas para comenzar a transformar tu espacio.
-          </p>
-        </motion.div>
-      ) : (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-          {/* Name & Email */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label htmlFor="nombre" style={labelStyle}>Nombre</label>
-              <input
-                id="nombre"
-                name="nombre"
-                type="text"
-                required
-                value={form.nombre}
-                onChange={handleChange}
-                placeholder="Tu nombre"
-                className="w-full outline-none transition-all duration-300 focus:border-[#82866f]"
-                style={inputStyle}
-              />
-            </div>
-            <div>
-              <label htmlFor="email" style={labelStyle}>Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                value={form.email}
-                onChange={handleChange}
-                placeholder="tu@email.com"
-                className="w-full outline-none transition-all duration-300 focus:border-[#82866f]"
-                style={inputStyle}
-              />
-            </div>
-          </div>
+          {message}
+        </p>
+      </div>
 
-          {/* Phone */}
-          <div>
-            <label htmlFor="telefono" style={labelStyle}>Teléfono</label>
-            <input
-              id="telefono"
-              name="telefono"
-              type="tel"
-              value={form.telefono}
-              onChange={handleChange}
-              placeholder="+54  0000-0000"
-              className="w-full outline-none transition-all duration-300 focus:border-[#82866f]"
-              style={inputStyle}
-            />
-          </div>
-
-          {/* Message */}
-          <div>
-            <label htmlFor="mensaje" style={labelStyle}>Mensaje</label>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              required
-              value={form.mensaje}
-              onChange={handleChange}
-              rows={4}
-              placeholder="Cuéntanos sobre tu proyecto..."
-              className="w-full outline-none transition-all duration-300 focus:border-[#82866f] resize-none"
-              style={inputStyle}
-            />
-          </div>
-
-          {/* Submit */}
-          <button
-            type="submit"
-            disabled={loading}
-            className="mt-4 flex items-center justify-center gap-3 px-8 py-4 self-center md:self-start transition-all duration-300 cursor-pointer hover:bg-[#111110] hover:text-[#f1ede4]"
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: '0.65rem',
-              fontWeight: 400,
-              letterSpacing: '0.2em',
-              textTransform: 'uppercase',
-              backgroundColor: 'transparent',
-              color: '#111110',
-              border: '1px solid rgba(17,17,16,0.4)',
-            }}
-          >
-            {loading ? 'Enviando...' : 'Enviar mensaje'}
-            {!loading && <Send size={13} />}
-          </button>
-        </form>
-      )}
+      {/* Submit */}
+      <motion.a
+        href={CONTACT_WHATSAPP(message)}
+        target="_blank"
+        rel="noopener noreferrer"
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        className="mt-2 flex items-center gap-4 p-6 w-full md:w-auto self-stretch md:self-start transition-all duration-300"
+        style={{ backgroundColor: 'rgba(37,211,102,0.12)', border: '1px solid rgba(37,211,102,0.35)', textDecoration: 'none' }}
+      >
+        <div
+          className="flex items-center justify-center shrink-0"
+          style={{ width: '44px', height: '44px', backgroundColor: '#25D366', borderRadius: '50%' }}
+        >
+          <MessageCircle size={22} color="#ffffff" />
+        </div>
+        <p style={{ fontFamily: "'Inter', sans-serif", fontSize: '0.75rem', fontWeight: 400, color: '#111110', letterSpacing: '0.05em' }}>
+          Escribir por WhatsApp
+        </p>
+      </motion.a>
     </motion.div>
   );
 }

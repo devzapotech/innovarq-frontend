@@ -184,13 +184,13 @@ export const PROJECTS: Project[] = [
   },
    {
     id: 7,
-    name: 'craig',
+    name: 'PH Craig',
     location: 'Capital Federal',
     category: 'Reforma integral',
     year: '2026',
-    img: '/entre_rios.webp',
+    img: '/craig/cover/craig_cover.jpeg',
     size: 'small',
-    description: 'Reforma integral de departamento en planta baja con patio. Diseño de cocina abierta, remodelación de baños y renovación de terminaciones con materiales de alta durabilidad.',
+    description: 'Reforma integral de vivienda con renovación completa de cocina y dos baños. Actualización total de la instalación eléctrica, ploemeria y trabajos de pintura interior y exterior, logrando una renovación funcional y estética de todos los espacios intervenidos.',
     photos: [
       { src: '/craig/antes/craig_1.webp', label: 'Antes' },
       { src: '/craig/antes/craig_2.webp', label: 'Antes' },
@@ -210,13 +210,13 @@ export const PROJECTS: Project[] = [
   },
      {
     id: 8,
-    name: 'gallo',
+    name: 'Departamento Gallo',
     location: 'Capital Federal',
     category: 'Reforma integral',
     year: '2026',
-    img: '/entre_rios.webp',
+    img: '/gallo/cover/gallo_cover.jpg',
     size: 'small',
-    description: 'Reforma integral de departamento en planta baja con patio. Diseño de cocina abierta, remodelación de baños y renovación de terminaciones con materiales de alta durabilidad.',
+    description: 'Reforma integral de departamento con renovación completa de cocina y un baño. Actualización total de la instalación eléctrica, plomeria y trabajos de pintura interior, logrando una renovación funcional e integrada de todos los espacios intervenidos.',
     photos: [
       { src: '/gallo/despues/gallo_1.webp'},
       { src: '/gallo/despues/gallo_2.webp'},
