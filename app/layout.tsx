@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Innovarq Studio | Arquitectura y Reformas Integrales en Buenos Aires",
-  description: "Desde 2018, Innovarq Studio impulsa proyectos que transforman espacios en experiencias reales. Nos especializamos en reformas integrales donde cada detalle importa.",
+  description: "Desde 2018 transformamos espacios en experiencias reales. Reformas integrales en Buenos Aires donde cada detalle importa.",
   verification: {
     google: "pNa2vVpYKiPQbO3LM0VRHMBYHBlHu1Q1sMSu6iLVV0A",
   },
