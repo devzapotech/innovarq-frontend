@@ -14,15 +14,74 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://studioinnovarq.com";
+
+// Con hosting propio (sin entornos de preview separados por Vercel) el
+// noindex se activa a mano seteando NEXT_PUBLIC_SITE_ENV=preview en el
+// entorno que corresponda; por defecto el sitio se indexa.
+const isIndexable = process.env.NEXT_PUBLIC_SITE_ENV !== "preview";
+
 export const metadata: Metadata = {
-  title: "Innovarq Studio | Arquitectura y Reformas Integrales en Buenos Aires",
-  description: "Desde 2018 transformamos espacios en experiencias reales. Reformas integrales en Buenos Aires donde cada detalle importa.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    template: "%s | Innovarq Studio",
+    default: "Innovarq Studio | Arquitectura y Reformas Integrales en Buenos Aires",
+  },
+  description: "Desde 2018, Innovarq Studio transforma espacios en experiencias reales: reformas integrales, diseño arquitectónico e interiorismo en Buenos Aires.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: SITE_URL,
+    siteName: "Innovarq Studio",
+    title: "Innovarq Studio | Arquitectura y Reformas Integrales en Buenos Aires",
+    description: "Desde 2018, Innovarq Studio transforma espacios en experiencias reales: reformas integrales, diseño arquitectónico e interiorismo en Buenos Aires.",
+    images: ["/hero_img.webp"],
+  },
+  robots: {
+    index: isIndexable,
+    follow: isIndexable,
+    googleBot: {
+      index: isIndexable,
+      follow: isIndexable,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   verification: {
     google: "pNa2vVpYKiPQbO3LM0VRHMBYHBlHu1Q1sMSu6iLVV0A",
   },
   other: {
     "facebook-domain-verification": "9damlddtk64cbkb4qvvmniezfx5d77",
   },
+};
+
+// LocalBusiness JSON-LD. Los campos marcados con TODO no están disponibles
+// en el código (no hay calle/número ni página de Facebook) — completar si
+// corresponde.
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Innovarq Studio",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo_transparente_negro.webp`,
+  image: `${SITE_URL}/hero_img.webp`,
+  telephone: "+5491155981705",
+  email: "consultas.innovarquitectos@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    // TODO: agregar streetAddress cuando esté disponible.
+    addressLocality: "Capital Federal",
+    addressRegion: "Buenos Aires",
+    addressCountry: "AR",
+  },
+  sameAs: [
+    "https://www.instagram.com/studio_innovarq",
+    "https://www.linkedin.com/in/innovarq-studio/",
+    // TODO: agregar URL de Facebook si el negocio tiene una página propia.
+  ],
 };
 
 export default function RootLayout({
@@ -33,10 +92,14 @@ export default function RootLayout({
 
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <>
             <Script
