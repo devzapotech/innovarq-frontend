@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
@@ -14,6 +16,7 @@ export const ProjectCard = ({ project, index, onClick }: ProjectCardProps) => {
   // que sea un click simple, en cuyo caso se abre el modal como hasta
   // ahora — ctrl/cmd/shift/click-medio siguen abriendo la página real.
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!onClick) return;
     if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
     onClick();

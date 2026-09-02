@@ -65,7 +65,10 @@ export interface HeroScrollIndicatorProps {
 export interface ProjectCardProps {
   project: Project;
   index: number;
-  onClick: () => void;
+  // Si no se pasa, la card es un <Link> normal a /proyectos/[slug] (uso en
+  // el listado /proyectos). Si se pasa, un click simple abre el modal en su
+  // lugar (uso en la home).
+  onClick?: () => void;
 }
 
 export interface ProjectsFilterProps {
