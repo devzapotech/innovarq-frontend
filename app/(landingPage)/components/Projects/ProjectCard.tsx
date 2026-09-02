@@ -2,24 +2,39 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { ProjectCardProps } from '@/app/props';
+import { getProjectSlug } from '@/app/lib/slug';
 
 export const ProjectCard = ({ project, index, onClick }: ProjectCardProps) => {
   const [hovered, setHovered] = useState(false);
   const isLarge = project.size === 'large';
 
+  // Navega a /proyectos/[slug] (para que Google la rastree e indexe) salvo
+  // que sea un click simple, en cuyo caso se abre el modal como hasta
+  // ahora — ctrl/cmd/shift/click-medio siguen abriendo la página real.
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    onClick();
+  };
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-10%' }}
-      transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-      className={`relative overflow-hidden cursor-pointer group ${isLarge ? 'md:col-span-2' : ''}`}
+    <Link
+      href={`/proyectos/${getProjectSlug(project)}`}
+      onClick={handleClick}
+      className={`relative overflow-hidden cursor-pointer group block ${isLarge ? 'md:col-span-2' : ''}`}
       style={{ aspectRatio: isLarge ? '16/9' : '4/5' }}
-      onClick={onClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-10%' }}
+        transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute inset-0"
+      >
       {/* Image */}
       <motion.div
         className="absolute inset-0"
@@ -83,5 +98,6 @@ export const ProjectCard = ({ project, index, onClick }: ProjectCardProps) => {
         )}
       </AnimatePresence>
     </motion.div>
+    </Link>
   );
 };
